@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+felasco = TrailSystem.create!(name: "San Felasco", has_fee: true, highest_trailhead: 234)
+santos = TrailSystem.create!(name: "Santos", has_fee: false, highest_trailhead: 241)

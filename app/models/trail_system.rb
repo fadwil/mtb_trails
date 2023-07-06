@@ -1,0 +1,3 @@
+class TrailSystem < ApplicationRecord
+  
+end
