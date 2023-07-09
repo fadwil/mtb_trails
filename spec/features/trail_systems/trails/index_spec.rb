@@ -1,6 +1,7 @@
 require "rails_helper"
 
-RSpec.describe "Show trail system's trails index", type: :feature do
+# trail_systems trails index page
+RSpec.describe "/trail_systems/:id/trails", type: :feature do
   # As a visitor
   # When I visit '/trail_systems/:id/trails'
   # Then I see each Trail that is associated with that Trail System with each trail's attributes
