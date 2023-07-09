@@ -1,0 +1,7 @@
+<h1>All Trails</h1>
+<% @trails.each do |trail| %>
+  <h3><%= trail.name %></h3>
+  <p>Is Loop: <%= trail.is_loop %></p>
+  <p>Distance: <%= trail.distance %></p>
+  <p>Difficulty: <%= trail.difficulty %></p>
+<% end %>

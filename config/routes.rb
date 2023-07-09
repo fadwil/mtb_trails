@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/trail_systems", to: "trail_systems#index"
   get "/trail_systems/:id", to: "trail_systems#show"
+  get "/trails", to: "trails#index"
 end
