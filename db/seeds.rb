@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-felasco = TrailSystem.create!(name: "San Felasco", has_fee: true, highest_trailhead: 234)
-santos = TrailSystem.create!(name: "Santos", has_fee: false, highest_trailhead: 241)
+@felasco = TrailSystem.create!(name: "San Felasco", has_fee: true, highest_trailhead: 234)
+@santos = TrailSystem.create!(name: "Santos", has_fee: false, highest_trailhead: 241)
+
+@tung_nut = @felasco.trails.create!(name: "Tung Nut", is_loop: true, distance: 2, difficulty: "Blue")
+@ravine = @felasco.trails.create!(name: "Ravine", is_loop: false, distance: 4, difficulty: "Blue")
