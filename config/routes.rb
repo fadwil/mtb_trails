@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "/trail_systems/:id", to: "trail_systems#show"
   get "/trails", to: "trails#index"
   get "/trails/:id", to: "trails#show"
-  get "/trail_systems/:id/trails", to: "trail_systems#trails_index"
+  get "/trail_systems/:id/trails", to: "trail_systems/trails#index"
 end
