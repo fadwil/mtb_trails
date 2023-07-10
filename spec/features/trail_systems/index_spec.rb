@@ -30,4 +30,33 @@ RSpec.describe "trail systems index", type: :feature do
       expect(@santos.name).to appear_before(@felasco.name)
     end
   end
+
+  # As a visitor
+  # When I visit any page on the site
+  # Then I see a link at the top of the page that takes me to the trail Index
+  describe "I see a link at the top of the page that takes me to the trail Index" do
+    it "displays link to trail index" do
+      expect(page).to have_link("See all trails", href: "/trails")
+    end
+
+    it "when I click the button I am taken to the trail index page" do
+      click_link("See all trails")
+      expect(current_path).to eq("/trails")
+    end
+  end
+
+  # As a visitor
+  # When I visit any page on the site
+  # Then I see a link at the top of the page that takes me to the trail systems Index
+
+  describe "I see a link at the top of the page that takes me to the trail systems index" do
+    it "displays link to trail index" do
+      expect(page).to have_link("See all trail systems", href: "/trail_systems")
+    end
+
+    it "when I click the button I am taken to the trail systems index page" do
+      click_link("See all trail systems")
+      expect(current_path).to eq("/trail_systems")
+    end
+  end
 end
