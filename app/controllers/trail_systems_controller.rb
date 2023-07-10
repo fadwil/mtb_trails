@@ -7,8 +7,13 @@ class TrailSystemsController < ApplicationController
     @system = TrailSystem.find(params[:id])
   end
 
-  # def trails_index
-  #   @system = TrailSystem.find(params[:id])
-  #   @trails = @system.trails
-  # end
+  def create
+    system = TrailSystem.create(system_params)
+    redirect_to "/trail_systems"
+  end
+
+private
+  def system_params
+    params.permit(:name, :has_fee, :highest_trailhead)
+  end
 end
