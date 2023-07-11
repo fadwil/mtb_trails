@@ -7,9 +7,22 @@ class TrailSystemsController < ApplicationController
     @system = TrailSystem.find(params[:id])
   end
 
+  def new
+  end
+
   def create
     system = TrailSystem.create(system_params)
     redirect_to "/trail_systems"
+  end
+
+  def edit
+    @system = TrailSystem.find(params[:id])
+  end
+
+  def update
+    system = TrailSystem.find(params[:id])
+    system.update(system_params)
+    redirect_to '/trail_systems'
   end
 
 private

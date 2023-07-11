@@ -1,0 +1,9 @@
+<%= form_with url: "/trail_systems/#{@system.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %><br/>
+  <%= form.label :has_fee, "Has Fee" %>
+  <%= form.select :has_fee, ["true", "false"] %><br/>
+  <%= form.label :highest_trailhead, "Highest Trailhead" %>
+  <%= form.number_field :highest_trailhead %><br/>
+  <%= form.submit "Save Trail System" %>
+<% end %>
