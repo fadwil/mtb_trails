@@ -1,0 +1,12 @@
+<h1>Add New Trail to <%= @system.name %></h1>
+<%= form_with url: "/trail_systems/#{@system.id}/trails", method: :post, local: true do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %><br/>
+  <%= form.label :is_loop, "Loop?" %>
+  <%= form.select :is_loop, ["true", "false"] %><br/>
+  <%= form.label :distance, "Distance" %>
+  <%= form.number_field :distance %><br/>
+  <%= form.label :difficulty, "Difficulty" %>
+  <%= form.text_field :difficulty %><br/>
+  <%= form.submit "Add Trail" %>
+<% end %>

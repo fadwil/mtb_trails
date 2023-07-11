@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   patch "/trail_systems/:id", to: "trail_systems#update"
   get "/trails", to: "trails#index"
   get "/trails/:id", to: "trails#show"
+  get "/trail_systems/:id/trails/new", to: "trail_systems/trails#new"
   get "/trail_systems/:id/trails", to: "trail_systems/trails#index"
+  post "/trail_systems/:id/trails", to: "trail_systems/trails#create"
+
 end

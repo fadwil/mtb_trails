@@ -1,4 +1,5 @@
 <h1><% @system.name %> Trails</h1>
+<a href="/trail_systems/<%= @system.id %>/trails/new">Add Trail</a>
 <% @trails.each do |trail| %>
   <h3><%= trail.name %></h3>
   <p>Is Loop: <%= trail.is_loop %></p>
