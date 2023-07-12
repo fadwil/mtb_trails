@@ -1,6 +1,6 @@
 class TrailsController < ApplicationController
   def index
-    @trails = Trail.all
+    @trails = Trail.all.where(is_loop: true)
   end
 
   def show
