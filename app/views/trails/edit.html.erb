@@ -1,0 +1,11 @@
+<%= form_with url: "/trails/#{@trail.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %><br/>
+  <%= form.label :is_loop, "Loop?" %>
+  <%= form.select :is_loop, ["true", "false"] %><br/>
+  <%= form.label :distance, "Distance" %>
+  <%= form.number_field :distance %><br/>
+  <%= form.label :difficulty, "Difficulty" %>
+  <%= form.text_field :difficulty %><br/>
+  <%= form.submit "Update Trail" %>
+<% end %>
